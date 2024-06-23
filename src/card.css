@@ -1,0 +1,109 @@
+.button-wrapper {
+    display: flex;
+    align-items: center;
+}
+/* .container{
+    background: linear-gradient(to top, #ffead7, white);
+} */
+.green-circle,
+.red-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-circle {
+    border-color: green;
+}
+
+.red-circle {
+    border-color: red;
+}
+
+.wrapper1 {
+    position: relative;
+    perspective: 40em;
+    display: grid;
+    transform-style: preserve-3d;
+    
+}
+
+.card1 {
+    grid-area: 1 / 1;
+    height: 200px;
+    width: 400px;
+    transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+    /* background: rgba(249, 198, 26, 0.88); */
+    background: linear-gradient(to bottom, #ff9d47, rgb(255, 255, 254));
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px -3px rgba(0, 0, 0, .1);
+}
+
+h6 {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card1 .enclosed1 {
+    background: #000;
+    line-height: 1;
+    /* color: rgba(249, 198, 26, 1); */
+    padding: 0 5px;
+    display: inline-block;
+    transform: translate(-1px, 1px) scale(0.75);
+    transform-origin: right center;
+}
+
+.wrapper1:before {
+    --bw: 5px;
+    grid-area: 1 / 1;
+    content: '';
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    margin-top: calc(-1 * var(--bw));
+    margin-left: calc(-1 * var(--bw));
+    background: transparent;
+    transform: translateX(-10px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+    pointer-events: none;
+    border: var(--bw) solid #000;
+    box-sizing: content-box;
+}
+
+
+.wrapper1:hover>div,
+.wrapper1:hover:before {
+    transform: none;
+}
+
+
+.wrapper1>div,
+.wrapper1:before {
+    will-change: transform;
+    transition: .3s transform cubic-bezier(.25, .46, .45, 1);
+}
+
+.mycard {
+    display: grid;
+    place-items: center;
+    background:
+
+        radial-gradient(circle at 100% 0%, rgba(255, 255, 255, .2) 10%, transparent 20%) center center / 15px 15px,
+}
