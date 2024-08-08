@@ -34,11 +34,11 @@ const Header = () => {
       <div className="container-fluid ">
         <div className='row d-flex justify-content-between w-100'>
           <div className='col-12 col-md-2'>
-            <a className="navbar-brand">
+            <div className="navbar-brand">
               <Link to="/">
-                <img src='./images/SundekLogo.png' height={64} alt="Sundek Logo" className='' style={{ marginTop: "0px" }} />
+                <img src='/images/SundekLogo.png' height={60} alt="Sundek Logo" className='' style={{ marginTop: "0px",marginLeft:"0px" }} />
               </Link>
-            </a>
+            </div>
           </div>
           <div className='col-12 col-md'>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsSundek" aria-controls="navbarsSundek" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,18 +71,18 @@ const Header = () => {
                     Contact us
                   </Link>
                 </li>
-                {adminId ? (<li className={`nav-item ${location.pathname === '/PandingOrders' ? 'active' : ''}`}>
-                  <Link to="/PandingOrders" className="nav-link">
+                {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/PandingOrders' ? 'active' : ''}`}>
+                  <Link to="/Admin/PandingOrders" className="nav-link">
                     Panding Orders
                   </Link>
                 </li>) : ("")}
-                {adminId ? (<li className={`nav-item ${location.pathname === '/Messages' ? 'active' : ''}`}>
-                  <Link to="/Messages" className="nav-link">
+                {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/Messages' ? 'active' : ''}`}>
+                  <Link to="/Admin/Messages" className="nav-link">
                     Messages
                   </Link>
                 </li>) : ("")}
-                {adminId ? (<li className={`nav-item ${location.pathname === '/ConformOrders' ? 'active' : ''}`}>
-                  <Link to="/ConformOrders" className="nav-link">
+                {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/ConformOrders' ? 'active' : ''}`}>
+                  <Link to="/Admin/ConformOrders" className="nav-link">
                     History
                   </Link>
                 </li>) : ("")}
@@ -91,17 +91,18 @@ const Header = () => {
 
               <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                 <li className="nav-item">
-                  <a className="nav-link " href="#">
+                  <div className="nav-link">
                     {adminId ? (
-                      <button className="nav-link" onClick={handleLogout}>
-                        <img src="./images/profileIcon.png" alt="User" height={40} />
+                      <button className="nav-link" onClick={handleLogout} style={{ background: 'none', border: 'none' }}>
+                        <img src="/images/profileIcon.png" alt="User" height={40} />
                       </button>
                     ) : (
                       <Link to="/Login" className="nav-link">
-                        <img src="./images/profileIcon.png" alt="User" height={40} />
+                        <img src="/images/profileIcon.png" alt="User" height={40} />
                       </Link>
                     )}
-                  </a>
+                  </div>
+
                 </li>
               </ul>
             </div>
