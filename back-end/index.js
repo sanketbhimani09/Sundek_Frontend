@@ -126,8 +126,6 @@ app.delete("/addConform/:id", async (req, res) => {
 
 //--------------start login----------------------
 
-
-
 app.get("/login", (req, res) => {
     LoginModel.find({}).then(function (login_datas) {
         console.log(login_datas);

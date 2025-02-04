@@ -65,6 +65,7 @@ function Panding() {
       console.error("Error completing order:", error);
     }
   };
+  
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.getDate().toString().padStart(2, '0');
@@ -77,7 +78,7 @@ function Panding() {
       <div class="mycard">
         <div class="wrapper1">
           <div class="card1" style={{height:"auto",width: "220px" }}>
-            <Link to={`/PandingOrders/${order._id}`} style={{ textDecoration: 'none' }}>
+            <Link to={`/Admin/PandingOrders/${order._id}`} style={{ textDecoration: 'none' }}>
               <h5 className="card-title text-dark">Name: {order.fullName}</h5>
               <h6 className="card-subtitle mb-2 text-muted">{order.city}</h6>
               <h6 className="card-subtitle mb-2 text-dark">Date:{formatDate(order.orderDate)}</h6>

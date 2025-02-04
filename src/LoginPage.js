@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import './LoginPage.css'; // Import your CSS file for styling
+import './LoginPage.css';
 
 const LoginPage = () => {
   const [userName, setUserName] = useState('');

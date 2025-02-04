@@ -36,51 +36,62 @@ const Header = () => {
           <div className='col-12 col-md-2'>
             <div className="navbar-brand">
               <Link to="/">
-                <img src='/images/SundekLogo.png' height={60} alt="Sundek Logo" className='' style={{ marginTop: "0px",marginLeft:"0px" }} />
+                <img src='/images/SundekLogo.png' height={60} alt="Sundek Logo" className='' style={{ marginTop: "0px", marginLeft: "0px" }} />
               </Link>
             </div>
           </div>
           <div className='col-12 col-md'>
+            
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsSundek" aria-controls="navbarsSundek" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
+            
             <div className="collapse navbar-collapse justify-content-end" id="navbarsSundek">
+              
               <ul className="custom-navbar-nav navbar-nav mb-2 mb-md-0" id='menu'>
+                
                 <li className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
                   <Link to="/" className="nav-link">
                     Home
                   </Link>
                 </li>
+
                 <li className={`nav-item ${location.pathname === '/AboutUs' ? 'active' : ''}`}>
                   <Link to="/AboutUs" className="nav-link">
                     About us
                   </Link>
                 </li>
+
                 <li className={`nav-item ${location.pathname === '/BookNow' ? 'active' : ''}`}>
                   <Link to="/BookNow" className="nav-link">
                     Book now
                   </Link>
                 </li>
+
                 <li className={`nav-item ${location.pathname === '/MoreDetails' ? 'active' : ''}`}>
                   <Link to="/MoreDetails" className="nav-link">
                     More Details
                   </Link>
                 </li>
+
                 <li className={`nav-item ${location.pathname === '/ContactUs' ? 'active' : ''}`}>
                   <Link to="/ContactUs" className="nav-link">
                     Contact us
                   </Link>
                 </li>
+
                 {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/PandingOrders' ? 'active' : ''}`}>
                   <Link to="/Admin/PandingOrders" className="nav-link">
                     Panding Orders
                   </Link>
                 </li>) : ("")}
+                
                 {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/Messages' ? 'active' : ''}`}>
                   <Link to="/Admin/Messages" className="nav-link">
                     Messages
                   </Link>
                 </li>) : ("")}
+                
                 {adminId ? (<li className={`nav-item ${location.pathname === '/Admin/ConformOrders' ? 'active' : ''}`}>
                   <Link to="/Admin/ConformOrders" className="nav-link">
                     History
@@ -102,10 +113,11 @@ const Header = () => {
                       </Link>
                     )}
                   </div>
-
                 </li>
               </ul>
+
             </div>
+
           </div>
         </div>
       </div>
