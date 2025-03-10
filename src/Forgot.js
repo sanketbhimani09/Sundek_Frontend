@@ -23,12 +23,12 @@ const Forgot = () => {
     }
 
     try {
-      const checkResponse = await fetch(`http://localhost:3030/login/${userName}`);
+      const checkResponse = await fetch(`https://sundek-backend.onrender.com/login/${userName}`);
       if (!checkResponse.ok) {
         throw new Error("Username does not exist. Please enter a valid username.");
       }
 
-      const response = await fetch(`http://localhost:3030/login/${userName}`, {
+      const response = await fetch(`https://sundek-backend.onrender.com/login/${userName}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"

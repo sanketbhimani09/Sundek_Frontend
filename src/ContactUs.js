@@ -6,7 +6,7 @@ import './index.css';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const apiUrl = "http://localhost:3030/send-message";
+    const apiUrl = "https://sundek-backend.onrender.com/send-message";
     const navigate = useNavigate();
 
     const handleChange = (e) => {

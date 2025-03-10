@@ -12,14 +12,14 @@ const Messages = () => {
     const navigate = useNavigate();
     
     useEffect(() => {
-        fetch("http://localhost:3030/messages")
+        fetch("https://sundek-backend.onrender.com/messages")
             .then((res) => res.json())
             .then((data) => setMessage(data));
     }, [message]);
 
     const handleCancel = async (msgId, event) => {
         try {
-            await fetch(`http://localhost:3030/messages/${msgId}`, {
+            await fetch(`https://sundek-backend.onrender.com/messages/${msgId}`, {
                 method: "DELETE",
             });
             event.preventDefault();

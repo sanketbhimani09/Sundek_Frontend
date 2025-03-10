@@ -9,14 +9,14 @@ function Panding() {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3030/orderList")
+    fetch("https://sundek-backend.onrender.com/orderList")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handleCancel = async (orderId, event) => {
     try {
-      await fetch(`http://localhost:3030/orderList/${orderId}`, {
+      await fetch(`https://sundek-backend.onrender.com/orderList/${orderId}`, {
         method: "DELETE",
       });
       event.preventDefault();
@@ -30,7 +30,7 @@ function Panding() {
 
   const handleComplete = async (order) => {
     try {
-      const deleteResponse = await fetch(`http://localhost:3030/orderList/${order._id}`, {
+      const deleteResponse = await fetch(`https://sundek-backend.onrender.com/orderList/${order._id}`, {
         method: "DELETE",
       });
 
@@ -38,7 +38,7 @@ function Panding() {
         throw new Error(`Failed to delete order: ${deleteResponse.status} ${deleteResponse.statusText}`);
       }
 
-      const addResponse = await fetch("http://localhost:3030/addConform", {
+      const addResponse = await fetch("https://sundek-backend.onrender.com/addConform", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

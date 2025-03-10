@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const BookNow = () => {
     const navigate = useNavigate();
     const [data, setData] = useState({ fullName: "", mobileNo: "", pincode: "", capacity: 100, quantity: 1, city: "", state: "", orderDate: new Date().toISOString().split('T')[0], address: "" });
-    const apiUrl = "http://localhost:3030/BookNow";
+    const apiUrl = "https://sundek-backend.onrender.com/BookNow";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
