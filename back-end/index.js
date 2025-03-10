@@ -10,8 +10,9 @@ const Conform = require('./conform.js')
 const UserModel = require('./user.js')
 const LoginModel = require('./login.js')
 const ContactModel = require('./contactus.js')
+// mongoose.connect("mongodb://localhost:27017/admin_database")
+mongoose.connect("mongodb+srv://sanketbhimani92:sanketatlas9@cluster0.jh7pq.mongodb.net/admin_database?retryWrites=true&w=majority&appName=Cluster0")
 
-mongoose.connect("mongodb://localhost:27017/admin_database")
 
 // -----------for panding order---------------
 app.get("/orderList", (req, res) => {
